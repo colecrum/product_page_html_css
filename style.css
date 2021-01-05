@@ -1,0 +1,200 @@
+/*Overlays rgba on background img */
+body {
+  background-blend-mode: multiply;
+  background: url("https://images.pexels.com/photos/3735648/pexels-photo-3735648.jpeg?cs=srgb&dl=pexels-polina-tankilevitch-3735648.jpg&fm=jpg") rgba(255,165,0,50%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Georgia;
+}
+
+/*wraps navbar on header img*/
+header {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(210,105,30);
+}
+
+/*Reduce img src to logo scale*/
+header img {
+  height: 5%;
+  width: 5%;
+  padding: 20px;
+}
+
+/* Pads the navigation bar */
+nav {
+  padding-top: 30px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #f2f2f2;
+  padding: 30px 30px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+/* Specifies the section parameters */
+#section-container {
+  width: 90%;
+  height: 1000px;
+  margin: 20px;
+}
+
+/* Style the product labels */
+.product-label {
+  color: #4a2c2a;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Style the product subtitles */
+#subtitle {
+  font-size: 15px;
+  color: #2C1608;
+  margin-right: 60px;
+}
+
+/* Setting section parameters by 1/3 */
+#product-section {
+  width: 100%;
+  height: 33%;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  background-color: rgb(255,255,255,60%);
+}
+
+/* Scaling image down to 5% view */
+.product-image {
+  height: 5%;
+  width: 5%;
+  margin-right: 40px;
+}
+
+/* Setting products to row */
+#products {
+  display: flex;
+  flex-direction: row;
+    margin: 0 0 0 auto;
+}
+
+/* Staggered row effect */
+#accessories {
+  position: relative;
+  top: 75px;
+}
+
+/* Staggered row effect */
+#accessories-label {
+  position: relative;
+  top: 75px;
+}
+
+/* Staggered row effect */
+#spa {
+  position: relative;
+  top: 150px;
+}
+
+/* Staggered row effect */
+#spa-label {
+  position: relative;
+  top: 150px;
+}
+
+/* Setting section parameters by 1/3 */
+#process-section {
+  width: 100%;
+  height: 33%;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Setting section parameters by 1/3 */
+#contact-section {
+  width: 100%;
+  height: 33%;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+/* form block style */
+#thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: rgb(0, 0, 255);
+  }
+ 
+/* form block */
+  .fullCard {
+    width: 800px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 20px;
+    margin: auto;
+    background-color: rgb(150,67,21,80%);
+    color: white;
+  }
+
+/* Input field style */
+.stretch-field {
+  display: flex;
+  margin-top: 10px;
+  padding: 0px;
+  width: 100%;
+  height: 30px;
+}
+
+/* Form field style */
+.field-title {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Section desc. style */
+#email-description {
+  font-size: 35px;
+  color: white;
+}
+
+/* form submit button */
+.submit-layout {
+  height: 35px;
+  width: 70px;
+}
