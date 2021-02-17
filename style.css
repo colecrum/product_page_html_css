@@ -3,9 +3,13 @@ body {
   background-blend-mode: multiply;
   background: url("https://images.pexels.com/photos/3735648/pexels-photo-3735648.jpeg?cs=srgb&dl=pexels-polina-tankilevitch-3735648.jpg&fm=jpg") rgba(255,165,0,50%);
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   font-family: Georgia;
 }
+
+/* NAV --------------------------------------------- */
 
 /*wraps navbar on header img*/
 header {
@@ -20,7 +24,7 @@ header {
 }
 
 /*Reduce img src to logo scale*/
-header img {
+#header-img {
   height: 5%;
   width: 5%;
   padding: 20px;
@@ -56,8 +60,9 @@ nav {
   .topnav a, .topnav-right {
     float: none;
     display: block;
+    font-size: 20px;
+    padding: 0px 0px
   }
-
   .topnav-centered a {
     position: relative;
     top: 0;
@@ -66,11 +71,58 @@ nav {
   }
 }
 
-/* Specifies the section parameters */
-#section-container {
-  width: 90%;
-  height: 1000px;
-  margin: 20px;
+
+/* MAIN ---------------------------------------------*/
+
+main {
+  text-align: center;
+}
+
+section {
+   /* activate to view section dimensions
+  background-color: purple;*/
+  margin-top: 40px; 
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    margin: auto;
+    height: auto;
+    width: 100%;
+    padding-top: none;
+    min-height: none;
+  }
+}
+
+/* section sizing */
+.sm-section {
+  min-height: 33vh;
+}
+
+.md-section {
+  min-height: 66vh;
+}
+
+.lg-section {
+  min-height: 99vh;
+}
+
+/* PRODUCT SECTION ------------------------------------- */
+
+/* Style product section */
+#product-section {
+  padding-bottom: 40px;
+  padding-top: 20px;
+  background-color: rgb(255,255,255,60%);
+}
+
+/* Set product grid for staggered effect */
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-content: space-evenly;
 }
 
 /* Style the product labels */
@@ -81,75 +133,79 @@ nav {
 }
 
 /* Style the product subtitles */
-#subtitle {
+.subtitle {
   font-size: 15px;
   color: #2C1608;
-  margin-right: 60px;
+  padding-left: 120px;
 }
 
-/* Setting section parameters by 1/3 */
-#product-section {
-  width: 100%;
-  min-height: 33vh;
-  height: 33%;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  background-color: rgb(255,255,255,60%);
-}
-
-/* Scaling image down to 5% view */
+/* Scaling image down */
 .product-image {
-  height: 5%;
-  width: 5%;
+  height: 50%;
+  width: 20%;
   margin-right: 40px;
 }
 
-/* Setting products to row */
-#products {
-  display: flex;
-  flex-direction: row;
-    margin: 0 0 0 auto;
+/* Staggered row effect */
+#bean-cont {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+
+/* Staggered row effect */
+#accessories-cont {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 /* Staggered row effect */
-#accessories {
-  position: relative;
-  top: 75px;
+#spa-cont {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 
-/* Staggered row effect */
-#accessories-label {
-  position: relative;
-  top: 75px;
+@media only screen and (max-width: 600px) {
+  .product-image {
+    height: 40%;
+    width: 30%;
+  }
+  .subtitle {
+    padding-left: 0px;
+    font-size: 10px;
+  }
+  .product-label {
+    font-size: 25px;
+  }
 }
 
-/* Staggered row effect */
-#spa {
-  position: relative;
-  top: 150px;
-}
+/* PROCESS SECTION ---------------------------------------*/
 
-/* Staggered row effect */
-#spa-label {
-  position: relative;
-  top: 150px;
-}
-
-/* Setting section parameters by 1/3 */
 #process-section {
-  width: 100%;
-  min-height: 33vh;
-  height: 33%;
   padding-bottom: 40px;
   padding-top: 20px;
   text-align: center;
 }
 
-/* Setting section parameters by 1/3 */
-#contact-section {
+.videoWrapper {
   width: 100%;
-  min-height: 33vh;
-  height: 33%;
+  height: auto;
+}
+
+.video {
+  max-width: 100%;
+}
+
+/* LEARN MORE SECTION ---------------------------------- */
+
+/* Styling learn more section */
+#learnMore-section {
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center;
@@ -163,8 +219,7 @@ nav {
  
 /* form block */
   .fullCard {
-    width: 800px;
-    height: 250px;
+    width: 40%;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 10px 5px;
@@ -202,24 +257,45 @@ nav {
   width: 70px;
 }
 
-#designed-section {
+/* Media mobile sizing to fit form container in view */
+@media only screen and (max-width: 600px) {
+  .fullCard {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+/* SIGN-OFF --------------------------------------------*/
+
+/*designed by & contact*/
+#contact-section {
   color: white;
   text-align: center;
-  
+  min-height: 33vh;
 }
 
 .contact-links {
   height: auto;
-  width: 100%;
+  width: 25%;
+  display: inline-block;
+  padding: 20px;
+}
+
+.link-cont {
+  float: left;
+  width: 25%;
 }
 
 .contact-img {
   height: 75px;
   width: 75px;
-  padding: 25px;
 }
 
 #git-logo {
   height: 75px;
-  width: 125px;
+  width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-links {width: 100%;}
 }
