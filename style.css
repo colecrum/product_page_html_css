@@ -54,11 +54,11 @@ nav {
   color: black;
 }
 
-/* Add a color to the active/current link */
+/* Add a color to the active/current link 
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
-}
+} */
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
 @media screen and (max-width: 600px) {
@@ -66,7 +66,7 @@ nav {
     float: none;
     display: block;
     font-size: 20px;
-    padding: 0px 0px
+    padding: 0px 0px;
   }
   .topnav-centered a {
     position: relative;
@@ -76,6 +76,11 @@ nav {
   }
 }
 
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .topnav a, .topnav-right {
+  font-size: 20px;
+  }
+}
 
 /* MAIN ---------------------------------------------*/
 
@@ -89,16 +94,6 @@ section {
   margin-top: 40px; 
 }
 
-@media screen and (max-width: 600px) {
-  section {
-    margin: auto;
-    height: auto;
-    width: 100%;
-    padding-top: none;
-    min-height: none;
-  }
-}
-
 /* section sizing */
 .sm-section {
   min-height: 33vh;
@@ -110,6 +105,16 @@ section {
 
 .lg-section {
   min-height: 99vh;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    margin: auto;
+    height: auto;
+    width: 100%;
+    padding-top: none;
+    min-height: none;
+  }
 }
 
 /* PRODUCT SECTION ------------------------------------- */
@@ -187,6 +192,12 @@ section {
   }
   .product-label {
     font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .grid-container {
+    display: inline-block;
   }
 }
 
@@ -270,6 +281,13 @@ section {
   }
 }
 
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .fullCard {
+    width: 75%;
+    margin: auto;
+  }
+}
+
 /* SIGN-OFF --------------------------------------------*/
 
 /*designed by & contact*/
@@ -302,5 +320,9 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
+  .contact-links {width: 100%;}
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
   .contact-links {width: 100%;}
 }
