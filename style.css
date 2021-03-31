@@ -288,6 +288,12 @@ section {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .fullCard {
+    width: 75%;
+  }
+}
+
 /* SIGN-OFF --------------------------------------------*/
 
 /*designed by & contact*/
@@ -324,5 +330,9 @@ section {
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
+  .contact-links {width: 100%;}
+}
+
+@media screen and (max-width: 1000px) {
   .contact-links {width: 100%;}
 }
